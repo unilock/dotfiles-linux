@@ -9,6 +9,6 @@ We are using Pop!\_OS.
 - Automate Discord (PTB + BetterDiscord + PluginRepo + ThemeRepo + DoNotTrack + DiscordRecolor)
 - Automate Sublime Text settings
 
-stratosphere:
+With a second HDD:
 - Mount Data HDD at /mnt/Data
 - Chromium (flatpak) needs access to /mnt/Data - can be done with Flatseal (not optimal; prefer deb?)
