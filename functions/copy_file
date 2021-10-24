@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# make `rsync` look like `cp -v`
+copy_file() {
+    _input=$1
+    _output=$2
+
+    # check if output end with a slash
+    # adjust out-format appropriately
+    if [[ "$_output" =~ ^.*/$ ]]; then
+        _out_format="'%f' -> '$_output%n'"
+    else
+        _out_format="'%f' -> '$_output/%n'"
+    fi
+
+    rsync -r --out-format="$_out_format" $_input $_output | sed -E "s|\./||g; s|/'|'|g"
+}
