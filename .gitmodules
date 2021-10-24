@@ -1,0 +1,3 @@
+[submodule "dotfiles-common"]
+	path = dotfiles-common
+	url = https://github.com/unilock/dotfiles-common.git
