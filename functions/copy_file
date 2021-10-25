@@ -5,7 +5,23 @@ copy_file() {
     _input=$1
     _output=$2
 
-    # check if output end with a slash
+    # check if $_input is a file
+    # create parent dir of $_output if so
+    if [[ -f "$input" ]]; then
+        mkdir -p "$(dirname "$_output")"
+
+    # check if $_input is a directory
+    # create $_output if so
+    elif [[ -d "$_input" ]]; then
+        mkdir -p "$_output"
+
+    # !?
+    else
+        echo "[copy_file] Not a file or directory!?"
+        exit
+    fi
+
+    # check if output ends with a slash
     # adjust out-format appropriately
     if [[ "$_output" =~ ^.*/$ ]]; then
         _out_format="'%f' -> '$_output%n'"
@@ -13,5 +29,6 @@ copy_file() {
         _out_format="'%f' -> '$_output/%n'"
     fi
 
-    rsync -r --out-format="$_out_format" $_input $_output | sed -E "s|\./||g; s|/'|'|g"
+    # rsync command with evil regex that I already forgot the purpose of
+    rsync -r --out-format="$_out_format" "$_input" "$_output" | sed -E "s|\./||g; s|/'|'|g"
 }
