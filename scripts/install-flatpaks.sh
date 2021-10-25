@@ -11,4 +11,4 @@ print_line "Uninstalling unnecessary flatpaks."
 flatpak uninstall --unused
 
 print_line "Installing flatpaks."
-xargs flatpak install flathub < lists/flatpak-packages
+xargs flatpak install flathub < lists/flatpaks
