@@ -1,13 +1,13 @@
-- We are using Pop!\_OS
+- We are using Pop!\_OS.
 
 - Add apt packages + flatpaks
+
+- Install all packages automatically
 
 - Document Settings (e.g. Dock, "Night Light")
     - Automate this? Should be possible with GNOME command line utilities (gsettings)
 
 - Uninstall Firefox
-
-- Install apps automatically
 
 - Add Microsoft Edge Beta repository
 
@@ -25,3 +25,7 @@
                 - E.g. we want to copy `configs/apple` to `~/configs/pear`; `copy_file configs/apple ~/configs` will not work
         - Check if `$_input` is file or directory?
             - This should work...
+            - If file: create parent dir of `$_output`
+                - What if we're copying `in_file` into an `out_dir` that already exists?
+                    - `mkdir -p` will continue silently
+            - If folder: create dir `$_output`
