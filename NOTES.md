@@ -1,0 +1,2 @@
+- It's good etiquette to put a "/." at the end of rsync's input (directory)
+- `mkdir -p` does not update time accessed when working with a preexisting directory
