@@ -1,18 +1,19 @@
-#!/bin/bash
+#!/bin/sh
 
 # make `rsync` look like `cp -v`
+
 copy_file() {
-    _input=$1
-    _output=$2
+    _input="$1"
+    _output="$2"
 
     # check if $_input is a file
     # create parent dir of $_output if so
-    if [[ -f "$input" ]]; then
+    if [ -f "$input" ]; then
         mkdir -p "$(dirname "$_output")"
 
     # check if $_input is a directory
     # create $_output if so
-    elif [[ -d "$_input" ]]; then
+    elif [ -d "$_input" ]; then
         mkdir -p "$_output"
 
     # !?
@@ -21,9 +22,9 @@ copy_file() {
         exit
     fi
 
-    # check if output ends with a slash
+    # check if last character of output is a slash
     # adjust out-format appropriately
-    if [[ "$_output" =~ ^.*/$ ]]; then
+    if [ "$(echo -n "$_output" | tail -c1)" = '/' ]; then
         _out_format="'%f' -> '$_output%n'"
     else
         _out_format="'%f' -> '$_output/%n'"

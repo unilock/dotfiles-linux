@@ -1,6 +1,6 @@
 #!/bin/sh
-source functions/common
-source functions/copy_file
+. ./functions/print_line
+. ./functions/copy_file
 
 print_line "Setting application defaults."
 

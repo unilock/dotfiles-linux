@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # add key to keyring and create apt sources list
 
@@ -15,8 +15,9 @@ add_apt_repo() {
     _srclist_dest="$_aptsource_dir/$_list_name"
 
     # microsoft >:(
-    if [[ "$_apt_deb" =~ ^\[.*$ ]]; then
-        _apt_full="[signed-by=$_key_dest ${_apt_deb:1}"
+    # warning: this may break in strange ways
+    if [ "$(echo -n "$_apt_deb" | head -c1)" = '[' ]; then
+        _apt_full="[signed-by=$_key_dest $(echo -n "$_apt_deb" | sed 's|\[||')"
     else
         _apt_full="[signed-by=$_key_dest] $_apt_deb"
     fi
@@ -25,7 +26,7 @@ add_apt_repo() {
     gpg --no-default-keyring --keyring "$_key_dest" --list-keys
     echo "deb $_apt_full" | sudo tee "$_srclist_dest"
 
-    if [[ "$_src" == "src" ]]; then
+    if [ "$_src" = 'src' ]; then
         echo "deb-src $_apt_full" | sudo tee -a "$_srclist_dest"
     fi
 }

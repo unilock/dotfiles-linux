@@ -1,5 +1,5 @@
 #!/bin/sh
-source functions/common
+. ./functions/print_line
 
 # Install long list of packages.
 

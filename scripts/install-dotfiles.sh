@@ -1,10 +1,10 @@
 #!/bin/sh
-source functions/common
-source functions/copy_file
+. ./functions/print_line
+. ./functions/copy_file
 
 print_line "Copying default configurations."
 
-# Edit bashrc...
+# Append to bashrc...
 cat dotfiles/bashrc >> ~/.bashrc
 
 # Copy gitconfigs...

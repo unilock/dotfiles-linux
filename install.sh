@@ -1,11 +1,11 @@
-#!/bin/bash
-source functions/common
-
-print_line "Setting up the environment."
+#!/bin/sh
+. ./functions/print_line
 
 print_line "Elevating to superuser."
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+print_line "Setting up the environment."
 
 # Copy dotfiles to home
 ./scripts/install-dotfiles.sh

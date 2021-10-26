@@ -1,6 +1,6 @@
 #!/bin/sh
-source functions/common
-source functions/add_apt_repo
+. ./functions/print_line
+. ./functions/add_apt_repo
 
 _aptsource_dir="/etc/apt/sources.list.d"
 _keyring="/usr/share/keyrings"

@@ -1,5 +1,5 @@
 #!/bin/sh
-source functions/common
+. ./functions/print_line
 
 print_line "Setting up GNOME defaults."
 
