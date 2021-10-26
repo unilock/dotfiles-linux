@@ -7,6 +7,3 @@
 - Document Settings (e.g. Dock, "Night Light")
     - Automate this? Should be possible with GNOME command line utilities (gsettings)
     - ^ Put in ./scripts/defaults-gnome-write.sh
-
-- Symlink dotfiles?
-    - Can't symlink .bashrc nor .config directory - symlink some but not all?
