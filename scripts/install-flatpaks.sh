@@ -1,7 +1,8 @@
 #!/bin/sh
 source functions/common
 
-# Install long list of packages.
+# Install long list of flatpaks.
+
 IFS=$'\n'
 
 print_line "Updating flatpak cache."
