@@ -26,10 +26,10 @@ scripts/special-packages.sh
 #sudo apt update
 
 print_line "Upgrading apt packages."
-sudo apt upgrade
+sudo apt upgrade -y
 
 print_line "Purging unnecessary packages."
-sudo apt autoremove --purge
+sudo apt autoremove -y --purge
 
 print_line "Installing apt packages."
-xargs sudo apt install < lists/apt-packages
+xargs sudo apt install -y < lists/apt-packages
