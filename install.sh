@@ -3,6 +3,10 @@ source functions/common
 
 print_line "Setting up the environment."
 
+print_line "Elevating to superuser."
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Copy dotfiles to home
 ./scripts/install-dotfiles.sh
 
@@ -14,6 +18,9 @@ print_line "Setting up the environment."
 
 # Install apt packages
 ./scripts/install-apt-packages.sh
+
+# Install special packages
+./scripts/install-special-packages.sh
 
 # Install flatpaks
 ./scripts/install-flatpaks.sh

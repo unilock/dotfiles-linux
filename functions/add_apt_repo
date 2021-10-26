@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# add key to keyring and create apt sources list
+
+# syntax: add_apt_repo  /  1 = "key output name"  /  2 = "sources.list.d name"  /  3 = "key input url"  /  4 = "sources.list url + etc."  /  5 = "include deb-src (empty if not)"
+
+add_apt_repo() {
+    _key_name="$1"
+    _list_name="$2"
+    _key_url="$3"
+    _apt_deb="$4"
+    _src="$5"
+
+    _key_dest="$_keyring/$_key_name"
+    _srclist_dest="$_aptsource_dir/$_list_name"
+
+    # microsoft >:(
+    if [[ "$_apt_deb" =~ ^\[.*$ ]]; then
+        _apt_full="[signed-by=$_key_dest ${_apt_deb:1}"
+    else
+        _apt_full="[signed-by=$_key_dest] $_apt_deb"
+    fi
+
+    curl -fsSL "$_key_url" | gpg --dearmor | sudo tee "$_key_dest" >/dev/null
+    gpg --no-default-keyring --keyring "$_key_dest" --list-keys
+    echo "deb $_apt_full" | sudo tee "$_srclist_dest"
+
+    if [[ "$_src" == "src" ]]; then
+        echo "deb-src $_apt_full" | sudo tee -a "$_srclist_dest"
+    fi
+}

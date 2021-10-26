@@ -1,6 +1,4 @@
 adb
-adoptopenjdk-16-hotspot-jre
-adoptopenjdk-8-hotspot-jre
 caffeine
 curl
 fastboot
@@ -9,12 +7,10 @@ gcc
 gdb
 git
 gnome-disk-utility
+gnupg
 gparted
 imagemagick
-microsoft-edge-beta
-nodejs
 p7zip-full
 puddletag
 tree
 wget
-winehq-staging
