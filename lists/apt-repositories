@@ -1,3 +1,4 @@
 deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main
+deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb $_codename main
 deb https://dl.winehq.org/wine-builds/ubuntu/ $_codename main
 deb https://download.sublimetext.com/ apt/stable/
