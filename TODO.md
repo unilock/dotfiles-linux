@@ -39,7 +39,7 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
                 - Top Bar
                     - Show Workspaces Button: OFF
                     - Show Applications Button: OFF
-                    - Date & Time and Notifications Position: RIGHT
+                    - Date & Time and Notifications Position: CENTER
                 - Windows Controls
                     - Show Minimize Button: ON
                     - Show Maximize Button: OFF
@@ -98,8 +98,8 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
         - OS Upgrade & Recovery: don't forget to upgrade recovery partition!
 
 - Other programs
-    - balenaEtcher - OK (download AppImage from website)
-    - Discord Canary - OK (download deb from website)
+    - balenaEtcher - repo to be added: https://github.com/balena-io/etcher#debian-and-ubuntu-based-package-repository-gnulinux-x86x64
+    - Discord Canary - OK (download deb from website, use curl/wget to preserve filename): https://discord.com/api/download/canary?platform=linux&format=deb
     - Powercord - ??? (auto-install via git: run `discord-canary`, wait for it to update (how?), `git clone` main powercord repo, `npm i`, `git clone` plugins + themes in subdirs, `npm run plug` in root repo dir, `kill -9` discord-canary (get PID?) (warn that Discord will pop up before all this: echo "WARNING", sleep 5, etc.))
 
 - Find a better screenshot program, and/or figure out how to bind it / the current one to CTRL+SHIFT+S or whatever
