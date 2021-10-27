@@ -4,15 +4,12 @@
 
 print_line "Copying default configurations."
 
-# Append to bashrc...
+print_line "Appending to bashrc..."
 cat dotfiles/bashrc >> ~/.bashrc
 
-# Copy gitconfigs...
+print_line "Copying gitconfigs..."
 copy_file dotfiles-common/dotfiles/gitconfig ~/.gitconfig
 copy_file dotfiles-common/.gitignore ~/.gitignore
 
-# Copy imwheelrc...
-copy_file dotfiles/imwheelrc ~/.imwheelrc
-
-# Copy config folder...
+print_line "Copying config folder..."
 copy_file dotfiles/config/. ~/.config
