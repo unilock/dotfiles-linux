@@ -20,7 +20,7 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
 
 - Differentiate between desktop + laptop?
     - imwheel on desktop only
-    - cursor speed on laptop only
+    - touchpad speed on laptop only
 
 - Set appropriate default Java (16 instead of 8)
 
@@ -86,7 +86,7 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
                 - Schedule: SUNSET TO SUNRISE
         - Mouse & Touchpad
             - Touchpad
-                - Touchpad Speed: 0.2 (org.gnome.desktop.peripherals.touchpad speed)
+                - Touchpad Speed (laptop): 0.2 (org.gnome.desktop.peripherals.touchpad speed)
                 - Disable while typing: OFF
         - Default Applications
             - Web: Microsoft Edge (beta)
