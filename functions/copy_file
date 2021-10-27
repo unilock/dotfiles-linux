@@ -8,7 +8,7 @@ copy_file() {
 
     # check if $_input is a file
     # create parent dir of $_output if so
-    if [ -f "$input" ]; then
+    if [ -f "$_input" ]; then
         mkdir -p "$(dirname "$_output")"
 
     # check if $_input is a directory
