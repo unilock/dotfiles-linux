@@ -1,8 +1,11 @@
 #!/bin/sh
 
 # print output of a command with current date + time
+
 print_line() {
     _cur_time=$(date '+%Y-%m-%d %H:%M:%S')
-    printf '[%s] ' "$_cur_time"
-    echo "$@"
+    echo -n "$(tput smso)"          # invert colors
+    printf '[%s] ' "$_cur_time"     # print current time
+    echo -n "$@"                    # print function input
+    echo "$(tput sgr0)"             # normal colors
 }
