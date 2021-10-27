@@ -16,6 +16,9 @@ print_line "Setting up the environment."
 # Set sane GNOME defaults
 ./scripts/defaults-gnome-write.sh
 
+# Purge apt packages
+./scripts/purge-apt-packages.sh
+
 # Install apt packages
 ./scripts/install-apt-packages.sh
 
