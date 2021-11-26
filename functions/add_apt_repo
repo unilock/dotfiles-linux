@@ -14,17 +14,9 @@ add_apt_repo() {
     _key_dest="$_keyring/$_key_name"
     _srclist_dest="$_aptsource_dir/$_list_name"
 
-    # microsoft >:(
-    # warning: this may break in strange ways
-    if [ "$(echo -n "$_apt_deb" | head -c1)" = '[' ]; then
-        _apt_full="[signed-by=$_key_dest $(echo -n "$_apt_deb" | sed 's|\[||')"
-    else
-        _apt_full="[signed-by=$_key_dest] $_apt_deb"
-    fi
-
     curl -fsSL "$_key_url" | gpg --dearmor | sudo tee "$_key_dest" >/dev/null
     gpg --no-default-keyring --keyring "$_key_dest" --list-keys
-    echo "deb $_apt_full" | sudo tee "$_srclist_dest"
+    echo "deb $_apt_deb" | sudo tee "$_srclist_dest"
 
     if [ "$_src" = 'src' ]; then
         echo "deb-src $_apt_full" | sudo tee -a "$_srclist_dest"
