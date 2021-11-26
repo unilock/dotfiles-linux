@@ -1,7 +1,7 @@
 #!/bin/sh
 . ./functions/print_line
 
-print_line "Elevating to superuser."
+print_line "Locking superuser."
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
