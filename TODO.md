@@ -2,6 +2,7 @@ TODO:
 
 - Wait for apt lock to die before running apt-related commands
     - while \[ -e .../apt-lock \]; do print_line "Waiting for apt lock..."; done
+    - ^ this may not work actually
 
 - This. Why does `copy_file` output look like this? `/home/unilock/.gitconfig/gitconfig`???
 ```
@@ -19,7 +20,6 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
 ```
 
 - Differentiate between desktop + laptop?
-    - imwheel on desktop only
     - touchpad speed on laptop only
 
 - Set appropriate default Java (16 instead of 8)
@@ -96,9 +96,10 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
             - Video: VLC media player
             - Photos: Image Viewer
         - OS Upgrade & Recovery: don't forget to upgrade recovery partition!
+        ...
+        - Time Zone: NEW YORK, NEW YORK, UNITED STATES
 
 - Other programs
     - Discord Canary - OK (download deb from website, use curl/wget to preserve filename): https://discord.com/api/download/canary?platform=linux&format=deb
     - Powercord - ??? (auto-install via git: run `discord-canary`, wait for it to update (how?), `git clone` main powercord repo, `npm i`, `git clone` plugins + themes in subdirs, `npm run plug` in root repo dir, `kill -9` discord-canary (get PID?) (warn that Discord will pop up before all this: echo "WARNING", sleep 5, etc.))
-
-- Find a better screenshot program, and/or figure out how to bind it / the current one to CTRL+SHIFT+S or whatever
+    - Flameshot - Import ./temporary/flameshot.cfg automatically
