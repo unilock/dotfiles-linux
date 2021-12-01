@@ -11,6 +11,7 @@ gnupg
 gparted
 imagemagick
 p7zip-full
-puddletag
+p7zip-rar
+python-is-python3
 tree
 wget
