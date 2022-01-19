@@ -27,7 +27,14 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
         - Cache downloaded ZIP + compare against new one? Ideally don't want to download new ZIP every time we check for updates
         - Parse https://developer.android.com/studio/releases/platform-tools#revisions for revision dates!?
 
-- Set appropriate default Java (16 instead of 8)
+- Install Adoptium JDK - https://adoptium.net/
+    - https://github.com/rpardini/adoptium-deb-installer ?
+    - purge preinstalled java + install `default-jre` (I think?????)
+    - in ./dotfiles/profile:
+```
+# java
+export PATH="$HOME/java/jdk-17.0.1+12/bin:$PATH"
+```
 
 - ./scripts/install-dotfiles.sh could probably be optimized (loop through files to copy, adding "." prefix?)
 

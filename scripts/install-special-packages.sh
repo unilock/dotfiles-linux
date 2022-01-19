@@ -10,9 +10,6 @@ _codename="$(lsb_release -cs)"
 
 print_line "Setting up special packages."
 
-print_line "Adding AdoptOpenJDK repository."
-add_apt_repo "adoptopenjdk.gpg" "adoptopenjdk.list" "https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public" "https://adoptopenjdk.jfrog.io/adoptopenjdk/deb $_codename main"
-
 print_line "Adding Sublime Text repository."
 add_apt_repo "sublimehq.gpg" "sublimehq.list" "https://download.sublimetext.com/sublimehq-pub.gpg" "https://download.sublimetext.com/ apt/stable/"
 
