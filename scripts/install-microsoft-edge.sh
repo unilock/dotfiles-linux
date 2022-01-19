@@ -5,7 +5,7 @@
 # what could possibly go wrong!
 
 _tmpdir="$(mktemp -d)"
-_dl='curl -fsSLo "$_tmpdir/edge.deb" "https://go.microsoft.com/fwlink/?linkid=2124602"'
+_dl="curl --progress-bar -Lo $_tmpdir/edge.deb "'https://go.microsoft.com/fwlink/?linkid=2124602'
 
 print_line "Installing Microsoft Edge (dev)."
 
