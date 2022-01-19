@@ -11,7 +11,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-
 print_line " - Bind Flameshot to PRINT SCREEN"
 
 # Disable GNOME's default Print Screen binding
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "'[]'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['']"
 
 # Edit this line if wanting to add more custom keybinds (e.g. "['.../custom0/','.../custom1/','.../custom2/']" etc.)
 # Then add more "gsettings set ...media-keys.custom-keybinding:/..." lines appropriately
