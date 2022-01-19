@@ -1,5 +1,5 @@
 
-#wine64
+# wine64
 alias wine=wine64
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html

@@ -22,6 +22,8 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
 - Differentiate between desktop + laptop?
     - touchpad speed on laptop only
 
+- Automate Terminal preferences; see "./temporary/gnome terminal prefs.txt"
+
 - Download android-platform-tools to \~/Documents - https://dl.google.com/android/repository/platform-tools-latest-linux.zip
     - Update automatically?
         - Cache downloaded ZIP + compare against new one? Ideally don't want to download new ZIP every time we check for updates
