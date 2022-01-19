@@ -1,7 +1,6 @@
-adb
+android-sdk-platform-tools-common
 caffeine
 curl
-fastboot
 ffmpeg
 gcc
 gdb

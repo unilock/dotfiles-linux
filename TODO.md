@@ -22,6 +22,11 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
 - Differentiate between desktop + laptop?
     - touchpad speed on laptop only
 
+- Download android-platform-tools to \~/Documents - https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+    - Update automatically?
+        - Cache downloaded ZIP + compare against new one? Ideally don't want to download new ZIP every time we check for updates
+        - Parse https://developer.android.com/studio/releases/platform-tools#revisions for revision dates!?
+
 - Set appropriate default Java (16 instead of 8)
 
 - ./scripts/install-dotfiles.sh could probably be optimized (loop through files to copy, adding "." prefix?)
