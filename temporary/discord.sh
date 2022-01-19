@@ -56,7 +56,7 @@ plugins=(
 
 themes=(
 #   "(user/repo)"
-    "snappercord/dark-discord"
+    "slow/dark-discord"
 )
 
 # TODO: make this one loop? (for plugins + themes)
