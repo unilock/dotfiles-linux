@@ -28,6 +28,9 @@ print_line "Setting up the environment."
 # Install special packages
 ./scripts/install-special-packages.sh
 
+# Install Microsoft Edge
+./scripts/install-microsoft-edge.sh
+
 # Install flatpaks
 ./scripts/install-flatpaks.sh
 

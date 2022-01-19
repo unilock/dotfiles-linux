@@ -104,7 +104,7 @@ export PATH="$HOME/java/jdk-17.0.1+12/bin:$PATH"
                 - Natural Scrolling: ON
                 - Disable while typing: OFF
         - Default Applications
-            - Web: Microsoft Edge (beta)
+            - Web: Microsoft Edge
             - Mail: Geary
             - Calendar: Calendar
             - Music: VLC media player
