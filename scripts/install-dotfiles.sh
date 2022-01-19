@@ -4,8 +4,9 @@
 
 print_line "Copying default configurations."
 
-print_line "Appending to bashrc..."
+print_line "Appending to bashrc + profile..."
 cat dotfiles/bashrc >> ~/.bashrc
+cat dotfiles/profile >> ~/.profile
 
 print_line "Copying gitconfigs..."
 copy_file dotfiles-common/dotfiles/gitconfig ~/.gitconfig
