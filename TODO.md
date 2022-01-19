@@ -101,6 +101,7 @@ export PATH="$HOME/java/jdk-17.0.1+12/bin:$PATH"
         - Mouse & Touchpad
             - Touchpad
                 - Touchpad Speed (laptop): 0.2 (org.gnome.desktop.peripherals.touchpad speed)
+                - Natural Scrolling: ON
                 - Disable while typing: OFF
         - Default Applications
             - Web: Microsoft Edge (beta)
