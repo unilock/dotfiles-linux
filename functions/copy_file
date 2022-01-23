@@ -31,5 +31,5 @@ copy_file() {
     fi
 
     # rsync command with evil regex that I already forgot the purpose of
-    rsync -r --out-format="$_out_format" "$_input" "$_output" | sed -E "s|\./||g; s|/'|'|g"
+    rsync -Ir --out-format="$_out_format" "$_input" "$_output" | sed -E "s|\./||g; s|/'|'|g"
 }
