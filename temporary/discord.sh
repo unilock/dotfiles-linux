@@ -17,6 +17,8 @@ echo "WARNING: discord will pop up, ignore it"; sleep 5
 # > [Modules] Finished module installations. [success: 1] [failure: 0]
 discord-canary; sleep 20
 # ^ need to get PID for discord-canary
+# ^ need to run discord-canary in bg; "discord-canary &" as temp solution
+# ^ may need to be >20 seconds!?
 
 # TODO: dynamic powercord install directory
 #
@@ -41,6 +43,7 @@ fi
 
 # is && a good idea here? if git fails, things could get funky...
 # maybe check for errors and quit if necessary?
+# ^ additional operators could be useful; a && b || c or some shit
 git clone https://github.com/powercord-org/powercord ~/Projects/powercord && cd ~/Projects/powercord
 
 npm i
@@ -56,8 +59,9 @@ plugins=(
 
 themes=(
 #   "(user/repo)"
-    "slow/dark-discord"
+    "..."
 )
+# ^ rip slow/dark-discord :(
 
 # TODO: make this one loop? (for plugins + themes)
 for $plugin in plugins; do
@@ -73,7 +77,7 @@ done
 sudo npm run plug
 
 # this works!
-kill -9 (discord canary)
+kill -9 ${discord canary pid here}
 
 echo "Discord is installed, check dotfiles-common/TODO.md for non-powercord settings"
 # TODO: automate those settings too?
