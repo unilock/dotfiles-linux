@@ -1,8 +1,16 @@
 TODO:
 
+- git
+    - automatically set upstream for dotfiles-linux + dotfiles-common (SSH)?
+    - create key automatically; instruct how to add to github after install.sh
 - disable caffeine autostart
 - keepassxc preferences
 - psensor preferences (not device-specific)
+- HxD
+    - point portable installer to ~/Documents/HxD (C:\users\unilock\Documents\HxD)
+    - run HxD64.exe via wine
+    - create .desktop file
+        - need to extract icon from executable (for aesthetics)
 - install runcat gnome extension (it is so cool and epic)
 
 - Wait for apt lock to die before running apt-related commands
