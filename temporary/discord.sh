@@ -52,6 +52,7 @@ npm i
 # TODO: if these uris change, self destruct
 plugins=(
 #   "(user/repo)"
+    "cyyynthia/pronoundb-powercord"
     "LandenStephenss/PowercordPluginDownloader"
     "ploogins/PowercordThemeDownloader"
     "redstonekasi/theme-toggler"
@@ -59,9 +60,8 @@ plugins=(
 
 themes=(
 #   "(user/repo)"
-    "..."
+    "discord-modifications/dark-discord"
 )
-# ^ rip slow/dark-discord :(
 
 # TODO: make this one loop? (for plugins + themes)
 for $plugin in plugins; do
