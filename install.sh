@@ -31,4 +31,8 @@ print_line "Setting up the environment."
 # Install flatpaks
 ./scripts/install-flatpaks.sh
 
+# Set up lm-sensors
+print_line "Setting up lm-sensors."
+sudo sensors-detect --auto
+
 print_line "Done. A reboot is recommended."

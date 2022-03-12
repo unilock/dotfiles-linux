@@ -9,8 +9,12 @@ gnome-disk-utility
 gnupg
 gparted
 imagemagick
+lm-sensors
 p7zip-full
 p7zip-rar
+psensor
 python-is-python3
+python2
+python3
 tree
 wget
