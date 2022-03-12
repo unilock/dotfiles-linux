@@ -14,6 +14,7 @@ print_line " - Bind Flameshot to PRINT SCREEN"
 gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['']"
 
 # Edit this line if wanting to add more custom keybinds (e.g. "['.../custom0/','.../custom1/','.../custom2/']" etc.)
+# (may be able to "append" rather than "set")
 # Then add more "gsettings set ...media-keys.custom-keybinding:/..." lines appropriately
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 

@@ -1,5 +1,10 @@
 TODO:
 
+- disable caffeine autostart
+- keepassxc preferences
+- psensor preferences (not device-specific)
+- install runcat gnome extension (it is so cool and epic)
+
 - Wait for apt lock to die before running apt-related commands
     - while \[ -e .../apt-lock \]; do print_line "Waiting for apt lock..."; done
     - ^ this may not work actually
@@ -32,7 +37,7 @@ unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh
 - Install Adoptium JDK - https://adoptium.net/
     - https://github.com/rpardini/adoptium-deb-installer ?
     - purge preinstalled java + install `default-jre` (I think?????)
-    - in ./dotfiles/profile:
+    - In ./dotfiles/profile:
 ```
 # java
 export PATH="$HOME/java/jdk-17.0.1+12/bin:$PATH"

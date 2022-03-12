@@ -2,7 +2,12 @@
 
 # add key to keyring and create apt sources list
 
-# syntax: add_apt_repo  /  1 = "key output name"  /  2 = "sources.list.d name"  /  3 = "key input url"  /  4 = "sources.list url + etc."  /  5 = "include deb-src (empty if not)"
+# syntax: add_apt_repo
+# 1 = "key output name"
+# 2 = "sources.list.d name"
+# 3 = "key input url"
+# 4 = "sources.list url + etc."
+# 5 = "include deb-src (empty if not)"
 
 add_apt_repo() {
     _key_name="$1"
