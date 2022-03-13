@@ -64,13 +64,20 @@ themes=(
 )
 
 # TODO: make this one loop? (for plugins + themes)
-for $plugin in plugins; do
-    git clone https://github.com/${plugin}.git src/Powercord/plugins/${everything after / in $plugin}
+cd src/Powercord/plugins
+# ^ temporary
+for plugin in "${plugins[@]}"; do
+    git clone https://github.com/${plugin}.git #src/Powercord/plugins/${everything after / in $plugin}
 done
 
-for $theme in themes; do
-    git clone https://github.com/${theme}.git src/Powercord/themes/${everything after / in $theme}
+cd ../themes
+# ^ VERY temporary
+for theme in "${themes[@]}"; do
+    git clone https://github.com/${theme}.git #src/Powercord/themes/${everything after / in $theme}
 done
+
+cd ../../../
+# ^ !!!
 
 # TODO: disable plugins as in dotfiles-common/TODO.md
 
