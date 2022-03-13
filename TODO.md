@@ -1,5 +1,17 @@
 TODO:
 
+- files: 3-bar menu: preferences: general -> expandable folders in list view: ON
+- terminal: global -> general -> menu accelerator (f10): ON
+- photo viewer: don't smooth images when zoomed in
+
+- touch \~/Templates/blank.txt
+- mkdir -p \~/Pictures/Screenshots (for flameshot)
+
+- allow run in background
+    - flameshot
+    - keepassxc
+    - nextcloud client
+
 - git
     - automatically set upstream for dotfiles-linux + dotfiles-common (SSH)?
     - create key automatically; instruct how to add to github after install.sh
@@ -16,21 +28,6 @@ TODO:
 - Wait for apt lock to die before running apt-related commands
     - while \[ -e .../apt-lock \]; do print_line "Waiting for apt lock..."; done
     - ^ this may not work actually
-
-- This. Why does `copy_file` output look like this? `/home/unilock/.gitconfig/gitconfig`???
-```
-unilock@pop-os:~/Projects/dotfiles-linux$ ./scripts/install-dotfiles.sh 
-[2021-10-26 20:13:20] Copying default configurations.
-[2021-10-26 20:13:20] gitconfigs
-'dotfiles-common/dotfiles/gitconfig' -> '/home/unilock/.gitconfig/gitconfig'
-'dotfiles-common/.gitignore' -> '/home/unilock/.gitignore/.gitignore'
-[2021-10-26 20:13:20] imwheelrc
-'dotfiles/imwheelrc' -> '/home/unilock/.imwheelrc/imwheelrc'
-[2021-10-26 20:13:20] config folder
-'dotfiles/config/autostart' -> '/home/unilock/.config/autostart'
-'dotfiles/config/autostart/imwheel.desktop' -> '/home/unilock/.config/autostart/imwheel.desktop'
-'dotfiles/config/autostart/nextcloud.desktop' -> '/home/unilock/.config/autostart/nextcloud.desktop'
-```
 
 - Differentiate between desktop + laptop?
     - touchpad speed on laptop only
