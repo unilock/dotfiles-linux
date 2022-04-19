@@ -1,11 +1,10 @@
 TODO:
 
+- delete WINE file associations (they take precedence and are annoying)
+
 - files: 3-bar menu: preferences: general -> expandable folders in list view: ON
 - terminal: global -> general -> menu accelerator (f10): ON
 - photo viewer: don't smooth images when zoomed in
-
-- touch \~/Templates/blank.txt
-- mkdir -p \~/Pictures/Screenshots (for flameshot)
 
 - allow run in background
     - flameshot
