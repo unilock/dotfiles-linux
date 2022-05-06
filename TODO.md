@@ -1,5 +1,7 @@
 TODO:
 
+- go through GNOME keybinds; edit / disable as necessary
+
 - delete WINE file associations (they take precedence and are annoying)
 
 - files: 3-bar menu: preferences: general -> expandable folders in list view: ON
