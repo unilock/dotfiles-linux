@@ -6,12 +6,15 @@ print_line "Setting up GNOME defaults."
 print_line " - 'minimize-or-previews' click-action for dash-to-dock"
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
 
+print_line " - Bind interact screencast recording to SHIFT + SUPER + R"
+gsettings set org.gnome.shell.keybindings show-screen-recording-ui "['<Shift><Super>r']"
+
 # --- Flameshot ---
 
 print_line " - Bind Flameshot to PRINT SCREEN"
 
 # Disable GNOME's default Print Screen binding
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['']"
+gsettings set org.gnome.shell.keybindings show-screenshot-ui "['']"
 
 # Edit this line if wanting to add more custom keybinds (e.g. "['.../custom0/','.../custom1/','.../custom2/']" etc.)
 # (may be able to "append" rather than "set")
