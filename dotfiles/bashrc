@@ -1,4 +1,8 @@
 
+# aliases
+alias sudo='sudo ' # make sudo work w/ aliases
+alias rm='trash'
+
 # wine64
 alias wine=wine64
 
