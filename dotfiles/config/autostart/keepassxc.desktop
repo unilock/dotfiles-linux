@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=flatpak run org.keepassxc.KeePassXC
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=KeePassXC
+Name=KeePassXC
+Comment[en_US]=Run KeePassXC via flatpak
+Comment=Run KeePassXC via flatpak

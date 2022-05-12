@@ -1,11 +1,22 @@
 TODO:
 
+- flatpaks: kdenlive + obs for recording
+
+- homebrew :(
+    - tap unilock/ideviceglue
+    - install
+        - libusbmuxd-git
+        - libimobiledevice-glue-git
+        - libimobiledevice-git
+        - libirecovery-git
+        - idevicerestore-git
+
 - go through GNOME keybinds; edit / disable as necessary
 
 - delete WINE file associations (they take precedence and are annoying)
 
 - files: 3-bar menu: preferences: general -> expandable folders in list view: ON
-- terminal: global -> general -> menu accelerator (f10): ON
+- terminal: global -> general -> menu accelerator (f10): OFF
 - photo viewer: don't smooth images when zoomed in
 
 - allow run in background
@@ -16,7 +27,6 @@ TODO:
 - git
     - automatically set upstream for dotfiles-linux + dotfiles-common (SSH)?
     - create key automatically; instruct how to add to github after install.sh
-- disable caffeine autostart
 - keepassxc preferences
 - psensor preferences (not device-specific)
 - HxD
@@ -46,8 +56,9 @@ TODO:
     - In ./dotfiles/profile:
 ```
 # java
-export PATH="$HOME/java/jdk-17.0.1+12/bin:$PATH"
+export PATH="$HOME/java/jdk-17.0.3+8/bin:$PATH"
 ```
+    - remember to update .profile!
 
 - ./scripts/install-dotfiles.sh could probably be optimized (loop through files to copy, adding "." prefix?)
 
