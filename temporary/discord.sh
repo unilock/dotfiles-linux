@@ -53,8 +53,6 @@ npm i
 plugins=(
 #   "(user/repo)"
     "cyyynthia/pronoundb-powercord"
-    "LandenStephenss/PowercordPluginDownloader"
-    "ploogins/PowercordThemeDownloader"
     "redstonekasi/theme-toggler"
 )
 

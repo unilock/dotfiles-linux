@@ -3,15 +3,18 @@
 
 print_line "Setting up GNOME defaults."
 
-print_line " - 'minimize-or-previews' click-action for dash-to-dock"
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
+-print_line " - Minimize or preview app windows when clicking dock icon"
+-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
 
-print_line " - Bind interact screencast recording to SHIFT + SUPER + R"
-gsettings set org.gnome.shell.keybindings show-screen-recording-ui "['<Shift><Super>r']"
+print_line " - Bind interactive screenshot to SUPER + SHIFT + S"
+gsettings set org.gnome.shell.keybindings show-screenshot-ui "['<Super><Shift>r']"
+
+print_line " - Bind interactive screencast recording to SUPER + SHIFT + R"
+gsettings set org.gnome.shell.keybindings show-screen-recording-ui "['<Super><Shift>r']"
 
 # --- Flameshot ---
 
-print_line " - Bind Flameshot to PRINT SCREEN"
+print_line " - Bind Flameshot to PRINT"
 
 # Disable GNOME's default Print Screen binding
 gsettings set org.gnome.shell.keybindings show-screenshot-ui "['']"

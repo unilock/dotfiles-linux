@@ -1,10 +1,10 @@
 TODO:
 
-- flatpaks: kdenlive + obs for recording
+- flatpaks: kdenlive + obs for recording, polymc for video game
 
 - homebrew :(
     - tap unilock/ideviceglue
-    - install
+    - install --HEAD
         - libusbmuxd-git
         - libimobiledevice-glue-git
         - libimobiledevice-git
@@ -15,7 +15,7 @@ TODO:
 
 - delete WINE file associations (they take precedence and are annoying)
 
-- files: 3-bar menu: preferences: general -> expandable folders in list view: ON
+- files: 3-bar menu -> preferences -> performance -> show thumbnails: ALL FILES
 - terminal: global -> general -> menu accelerator (f10): OFF
 - photo viewer: don't smooth images when zoomed in
 
@@ -66,10 +66,10 @@ export PATH="$HOME/java/jdk-17.0.3+8/bin:$PATH"
     - Automate this? Should be possible with GNOME command line utilities (gsettings)
     - ^ Put in ./scripts/defaults-gnome-write.sh
     - Settings
-        - Wi-Fi (if applicable): ON (laptop) / OFF (desktop)
-        - Bluetooth (if applicable): OFF
+        - Wi-Fi: ON (laptop) / OFF (desktop)
+        - Bluetooth: OFF
         - Desktop
-            - General
+            - Desktop Options
                 - Super Key Action: LAUNCHER
                 - Hot Corner: OFF
                 - Top Bar
@@ -82,49 +82,71 @@ export PATH="$HOME/java/jdk-17.0.3+8/bin:$PATH"
             - Background: (choice)
             - Appearance: DARK
             - Dock
+                - Enable Dock: ON
                 - Dock Options
                     - Extend docks to the edges of the screen: ON
                     - Show Launcher Icon in Dock: OFF
                     - Show Workspaces Icon in Dock: OFF
                     - Show Applications Icon in Dock: ON
                     - Show Mounted Drives: OFF
-                    - Icon Click Action: LAUNCH, MINIMIZE, OR PREVIEW (already figured out this one...)
-                - Dock Visibility: ALWAYS
-                - Show Dock on Display: PRIMARY
-                - Dock Size: 42
+                    - Icon Click Action: LAUNCH, MINIMIZE, OR PREVIEW WINDOWS
+                - Dock Visibility
+                    - ALWAYS VISIBLE
+                    - Show Dock on Display: PRIMARY DISPLAY
+                - Dock Size -> Custom Size: 42
                 - Position on the Desktop: BOTTOM
+            - Workspaces: (N/A)
         - Privacy
             - Connectivity Checking: ON
             - Location Services: ON
-            - Thunderbolt (if applicable): Direct Access: OFF
+            - Thunderbolt
+                - Direct Access: OFF
+                - ...
             - File History & Trash
+                - File History: ON
+                - File History Duration: FOREVER
+            - Trash & Temporary Files
                 - Automatically Delete Temporary Files: ON
                 - Automatically Delete Period: 1 DAY
-            - Screen Lock
+                - (delete temporary files)
+            - Screen -> Screen Lock
                 - Blank Screen Delay: 5 MINUTES (laptop) / 10 MINUTES (desktop)
                 - Automatic Screen Lock: ON
                 - Automatic Screen Lock Delay: SCREEN TURNS OFF
                 - Lock Screen on Suspend: ON
                 - Show Notifications on Lock Screen: OFF
-        - Sharing: Computer Name: (choice)
+        - Sharing -> Computer Name: (choice)
         - Power
             - Automatic Suspend
-                - (laptop)
-                    - On Battery Power: 15 MINUTES
-                    - Plugged In: 20 MINUTES
-                - (desktop)
-                    - Plugged In: 30 MINUTES
+                - When idle: ON
+                - ...
+                - Delay
+                    - (laptop)
+                        - On Battery Power: 15 MINUTES
+                        - Plugged In: 20 MINUTES
+                    - (desktop)
+                        - 30 MINUTES
             - Power Button Behavior: POWER OFF
             - Show Battery Percentage (laptop): ON
         - Displays
-            - Displays: Refresh Rate: (choice) (can test with glxgears)
+            - Displays
+                - (monitor)
+                    - Resolution: (choice)
+                    - Refresh Rate: (choice - can test with glxgears)
             - Night Light: ON
                 - Schedule: SUNSET TO SUNRISE
         - Mouse & Touchpad
+            - Primary Button: LEFT
+            - Mouse
+                - Mouse Speed: MAXIMUM!!! (what value is this?)
+                - Mouse Acceleration: ON
+                - Natural Scrolling: OFF(?)
             - Touchpad
                 - Touchpad Speed (laptop): 0.2 (org.gnome.desktop.peripherals.touchpad speed)
                 - Natural Scrolling: ON
                 - Disable while typing: OFF
+        - Color -> (laptop: download + add correct color profile)
+        - Firmware -> (laptop: `fwupdate upgrade` iirc)
         - Default Applications
             - Web: Microsoft Edge
             - Mail: Geary
@@ -132,9 +154,11 @@ export PATH="$HOME/java/jdk-17.0.3+8/bin:$PATH"
             - Music: VLC media player
             - Video: VLC media player
             - Photos: Image Viewer
-        - OS Upgrade & Recovery: don't forget to upgrade recovery partition!
-        ...
-        - Time Zone: NEW YORK, NEW YORK, UNITED STATES
+        - Date & Time
+            - Automatice Date & Time: ON
+            - Automatice Time Zone: ON
+            - Time Format: AM / PM
+        - OS Upgrade & Recovery: (don't forget to upgrade recovery partition!)
 
 - Other programs
     - Discord Canary - OK (download deb from website, use curl/wget to preserve filename): https://discord.com/api/download/canary?platform=linux&format=deb
