@@ -6,7 +6,6 @@ TODO:
     - tap unilock/ideviceglue
     - install --HEAD
         - libusbmuxd-git
-        - libimobiledevice-glue-git
         - libimobiledevice-git
         - libirecovery-git
         - idevicerestore-git
