@@ -44,7 +44,7 @@ fi
 # is && a good idea here? if git fails, things could get funky...
 # maybe check for errors and quit if necessary?
 # ^ additional operators could be useful; a && b || c or some shit
-git clone https://github.com/powercord-org/powercord ~/Projects/powercord && cd ~/Projects/powercord
+git clone https://github.com/replugged-org/replugged ~/Projects/replugged && cd ~/Projects/replugged
 
 npm i
 
@@ -53,7 +53,6 @@ npm i
 plugins=(
 #   "(user/repo)"
     "cyyynthia/pronoundb-powercord"
-    "redstonekasi/theme-toggler"
 )
 
 themes=(
