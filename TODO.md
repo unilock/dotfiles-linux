@@ -2,6 +2,9 @@ TODO:
 
 - flatpaks: kdenlive + obs for recording, polymc for video game
 
+- libimobiledevice build script: https://github.com/libimobiledevice/libimobiledevice/issues/1299#issuecomment-1100351830
+- don't do below
+```
 - homebrew :(
     - tap unilock/ideviceglue
     - install --HEAD
@@ -9,6 +12,7 @@ TODO:
         - libimobiledevice-git
         - libirecovery-git
         - idevicerestore-git
+```
 
 - go through GNOME keybinds; edit / disable as necessary
 
