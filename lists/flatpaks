@@ -1,13 +1,8 @@
-com.github.PintaProject.Pinta
 com.nextcloud.desktopclient.nextcloud
-com.valvesoftware.Steam.CompatibilityTool.Proton
 io.freetubeapp.FreeTube
-org.flameshot.Flameshot
-org.freedesktop.Platform.Compat.i386//21.08
-org.freedesktop.Platform.GL32.default//21.08
 org.gimp.GIMP
 org.gnome.meld
-org.goldendict.GoldenDict
 org.keepassxc.KeePassXC
 org.libreoffice.LibreOffice
+org.prismlauncher.PrismLauncher
 org.videolan.VLC

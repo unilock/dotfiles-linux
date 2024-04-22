@@ -1,6 +1,18 @@
 TODO:
 
-- flatpaks: kdenlive + obs for recording, polymc for video game
+- redo for KDE neon(?)
+
+- KDE neon needs `libpoppler-glib8:{i386,amd64}=22.02.0-2ubuntu0.3` SPECIFICALLY for wine
+
+- `chsh -s /bin/zsh`
+
+- fd: symlink /usr/bin/fdfind to ~/.local/bin
+- oxipng: download to ~/.local/bin
+- zsh-completions: git clone to ~/.zsh_completions
+
+***
+
+- flatpaks: kdenlive + obs for recording, PrismLauncher for video game
 
 - libimobiledevice build script: https://github.com/libimobiledevice/libimobiledevice/issues/1299#issuecomment-1100351830
 - don't do below

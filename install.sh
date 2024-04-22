@@ -17,10 +17,10 @@ print_line "Setting up the environment."
 ./scripts/defaults-app-write.sh
 
 # Set sane GNOME defaults
-./scripts/defaults-gnome-write.sh
+#./scripts/defaults-gnome-write.sh
 
 # Purge apt packages
-./scripts/purge-apt-packages.sh
+#./scripts/purge-apt-packages.sh
 
 # Install apt packages
 ./scripts/install-apt-packages.sh

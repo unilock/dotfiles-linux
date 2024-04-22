@@ -1,0 +1,15 @@
+[General]
+autoSaveImage=true
+launchAction=DoNotTakeScreenshot
+rememberSelectionRect=Never
+
+[GuiConfig]
+captureDelay=2
+
+[ImageSave]
+lastImageSaveLocation=file:///home/unilock/Pictures/Screenshots/Screenshot_20240421_184346.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts
+videoSaveLocation=file:///home/unilock/Videos/Recordings/

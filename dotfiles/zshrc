@@ -1,0 +1,57 @@
+fpath=($HOME/.zsh-completions/zsh-completions $fpath)
+
+# -- INFINITE HISTORY!! --
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=999999999
+export SAVEHIST=999999999
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+
+# -- opts --
+setopt NO_LIST_AMBIGUOUS
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# -- modules --
+autoload -Uz bashcompinit
+autoload -Uz compinit
+autoload -Uz select-word-style
+autoload -Uz zmv
+bashcompinit
+compinit
+select-word-style bash
+
+# -- aliases --
+alias sudo='sudo ' # make sudo work w/ aliases
+alias bat='batcat -pp'
+alias cat='bat'
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+alias grep='grep --color=always'
+alias ls='ls --color'
+alias rm='trash'
+alias wine='wine64'
+
+#alias java8='/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin/java'
+
+# -- exports --
+# > PROMPT <
+setopt PROMPT_SUBST
+export PROMPT='[%B%F{40}%m%f%b:%B%F{39}$(perl -pe "s/(\w)[^\/]+\/(?=.+\/)/\1\//g" <(print -P "%~"))%f%b] %B%F{213}%n%f%b%# '
+
+# > PATH <
+# ex: "hello:world:$PATH"
+# - "hello" has top priority (overrides all lower binaries)
+# - "world" overrides $PATH, but not "hello"
+# - "$PATH" is mac's default PATH
+export PATH="$HOME/.local/bin:$PATH" # local bins
+
+# > etc. <
+export EDITOR='subl'
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home'
+
+# -- misc --
+# sources
+. "$HOME/.zsecrets"
