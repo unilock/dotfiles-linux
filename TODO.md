@@ -2,7 +2,7 @@ TODO:
 
 - redo for KDE neon(?)
 
-- KDE neon needs `libpoppler-glib8:{i386,amd64}=22.02.0-2ubuntu0.3` SPECIFICALLY for wine
+- KDE neon needs `libpoppler-glib8:{i386,amd64}=22.02.0-2ubuntu0.4` SPECIFICALLY for wine
 
 - `chsh -s /bin/zsh`
 
